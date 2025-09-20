@@ -13,6 +13,11 @@ Stay updated with the latest builds, patch notes, and announcements!
 
 ---
 
+URL: <a href="https://safeswing.github.io/Ground-Protection-Alert-App/" style="color:red">https://safeswing.github.io/Ground-Protection-Alert-App/</a>
+
+
+---
+
 ## How to Use
 - Open the `index.html` file in your browser.  
 - Bookmark it to easily check for new updates.  
