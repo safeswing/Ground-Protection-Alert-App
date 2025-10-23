@@ -5,35 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GPA News App</title>
     <style>
-        body { font-family: Arial, sans-serif; background: #111; color: #eee; padding: 20px; line-height: 1.6; }
-        h1 { color: #ff5555; }
+        /* Base Styles */
+        body { font-family: Arial, sans-serif; background: #111; color: #DDD; padding: 20px; line-height: 1.6; }
+        h1 { color: #ff6767; }
         h2 { color: #ff8888; }
-        .update { border-bottom: 1px solid #333; margin-bottom: 15px; padding-bottom: 10px; }
+        ul { margin-left: 20px; }
+
+        /* Glass-card styles for updates */
+        .glass-card {
+            width: 240px;
+            background: rgba(0,0,0,0.26);
+            backdrop-filter: blur(31px);
+            -webkit-backdrop-filter: blur(31px);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow:
+                0 8px 32px rgba(0,0,0,0.3),
+                inset 0 1px 0 rgba(255,255,255,0.05),
+                inset 0 -1px 0 rgba(255,255,255,0.02),
+                inset 0 0 12px 6px rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        }
+        .glass-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(255,255,255,0.2), transparent, rgba(255,255,255,0.05));
+        }
+
+        /* Update styles */
+        .update h2 { margin: 0; }
         .date { color: #888; font-size: 0.9em; }
         .section { margin-top: 30px; }
-        ul { margin-left: 20px; }
         .moddb { margin-top: 40px; text-align: center; }
+        a { color: #ff6767; text-decoration: none; }
+        a:hover { color: #fff; }
+
+        /* Optional: Wrap iframe for dark background */
+        .moddb iframe { border: none; }
     </style>
 </head>
 <body>
     <h1>Ground Protection Alert – News</h1>
 
-    <div class="update">
-        <h2>0.0.7 Released</h2>
+    <div class="glass-card update">
+        <h2>0.0.8.5 Released</h2>
         <p class="date">September 16, 2025</p>
-        <p>First public pre-alpha demo. Core mechanics functional (blink, stamina), SCP-173 containment chamber added.</p>
+        <p>Halloween update, Expanded Map, 009 & 009 & 409 Added, including keycard system, and more.</p>
     </div>
 
-    <div class="update">
-        <h2>0.0.8 Planned</h2>
+    <div class="glass-card update">
+        <h2>0.10 Planned</h2>
         <p class="date">October 1, 2025</p>
-        <p>Adding SCP-207, 009, 005, 006. More rooms and pause menu.</p>
+        <p>Adding Weapon, and adding SCPs such as 1499 & 207, Expanding the map.</p>
     </div>
 
     <p>More updates coming soon!</p>
 
     <!-- Explanation Section -->
-    <div class="section">
+    <div class="section glass-card">
         <h2>Ground Protection Alert (GPA) – Game Overview</h2>
         <p>
             Ground Protection Alert (GPA) is a free, fan-made survival horror game inspired by the SCP Foundation universe.
@@ -57,10 +102,6 @@
         </ul>
 
         <h3>Development & Future Plans:</h3>
-        <p>
-            GPA is currently in early development, starting with SCP-173 testing scenarios. Future updates will expand the roster of SCPs,
-            environments, and story content, eventually evolving into a full containment-breach survival experience.
-        </p>
         <ul>
             <li>Android versions are not available yet (planned for the future).</li>
             <li>Player feedback will help shape the game as it develops.</li>
@@ -79,11 +120,11 @@
     </div>
 
     <!-- ModDB Download Section -->
-    <div class="moddb">
+    <div class="moddb glass-card">
         <h2>Download Ground Protection Alert (GPA)</h2>
-        <iframe width="600" height="180" src="https://www.moddb.com/games/ground-protection-alert/downloads/ground-protection-alert-40gpa41/widget" frameborder="0"></iframe>
+        <iframe width="600" height="180" src="https://www.moddb.com/games/ground-protection-alert/downloads/ground-protection-alert-40gpa41/widget"></iframe>
         <br>
-        <a href="https://www.moddb.com/games/ground-protection-alert/downloads/ground-protection-alert-40gpa41" target="_blank" style="color:#ff5555; text-decoration:none;">Download Ground Protection Alert (GPA) - ModDB</a>
+        <a href="https://www.moddb.com/games/ground-protection-alert/downloads/gpa-windows-0085" target="_blank">Download GPA Windows (0.0.8.5) - ModDB</a>
     </div>
 </body>
 </html>
